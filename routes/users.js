@@ -1,9 +1,15 @@
-var express = require('express');
-var router = express.Router();
+import express from "express";
+export const userRouter = express.Router();
 
-/* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
-});
-
-module.exports = router;
+function handleRouterUserHome(req,res){
+  res.send("user home");
+}
+function handleRouterUserEdit(req,res){
+  res.send("user edit");
+}
+function handleRouterUserPassword(req,res){
+  res.send("user psasword");
+}
+userRouter.get("/",handleRouterUserHome);
+userRouter.get("/edit",handleRouterUserEdit);
+userRouter.get("/password",handleRouterUserPassword);
