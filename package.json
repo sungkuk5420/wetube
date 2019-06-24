@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "babel-node app.js"
+    "start": "nodemon --exec babel-node init.js --delay 2"
   },
   "dependencies": {
     "@babel/core": "^7.3.3",
@@ -14,9 +14,7 @@
     "ejs": "~2.5.7",
     "express": "~4.16.0",
     "http-errors": "~1.6.2",
-    "morgan": "~1.9.0"
-  },
-  "scripts" : {
-    "start" : "nodemon --exec babel-node init.js --delay 2"
+    "morgan": "~1.9.0",
+    "pug": "^2.0.4"
   }
 }
