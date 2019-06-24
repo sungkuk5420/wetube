@@ -8,6 +8,7 @@ import userRouter from "./routes/userRouter";
 import videoRouter from "./routes/videoRouter";
 import globalRouter from "./routes/globalRouter";
 import routes from "./routes";
+import { localsMiddleware } from "./middlewares";
 
 var app = express();
 
@@ -21,9 +22,12 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use(localsMiddleware);
+
 app.use(routes.home, globalRouter);
 app.use(routes.users, userRouter);
 app.use(routes.videos, videoRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
