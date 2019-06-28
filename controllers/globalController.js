@@ -19,10 +19,15 @@ export const postJoin = (req, res) => {
   }
 };
 
+export const getLogin = (req, res) =>
+  res.render("login", { pageTitle: "Log In" });
+export const postLogin = (req, res) => {
+  res.redirect(routes.home);
+};
+
 export const home = (req, res) => res.render("home",{pageTitle:"main page", videos});
 export const search = (req, res) => {
   const {query: {term:searchingBy} } = req;
   res.render("search", { pageTitle: "Search", searchingBy, videos });
 };
-export const login = (req, res) => res.render("login",{pageTitle:"login page"});
 export const logout = (req, res) => res.render("logout",{pageTitle:"logout page"});
