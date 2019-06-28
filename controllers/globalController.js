@@ -30,4 +30,7 @@ export const search = (req, res) => {
   const {query: {term:searchingBy} } = req;
   res.render("search", { pageTitle: "Search", searchingBy, videos });
 };
-export const logout = (req, res) => res.render("logout",{pageTitle:"logout page"});
+export const logout = (req, res) => {
+  // To Do: Process Log Out
+  res.redirect(routes.home);
+};
