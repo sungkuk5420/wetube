@@ -9,3 +9,8 @@ npm install -g nodemon
 ```
 npm install 
 ```
+
+###mongoose
+```
+npm install mongoose
+```
