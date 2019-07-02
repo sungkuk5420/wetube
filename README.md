@@ -1,16 +1,21 @@
 # wetube
 youtube clone coding with nodeJS,MongoDB,VanillaJS
 
-### npm install -g nodemon
+### nodemon
 ```
 npm install -g nodemon
 ```
-###pug
+### pug
 ```
 npm install 
 ```
 
-###mongoose
+### mongoose
 ```
 npm install mongoose
+```
+
+### dotenv
+```
+npm install dotenv
 ```
