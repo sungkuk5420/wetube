@@ -19,3 +19,8 @@ npm install mongoose
 ```
 npm install dotenv
 ```
+
+### multer
+```
+npm install multer
+```

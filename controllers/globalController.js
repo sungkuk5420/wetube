@@ -1,5 +1,6 @@
 import { videos } from "../db";
 import routes from "../routes";
+import Video from "../models/Video";
 
 export const getJoin = (req, res) => {
   res.render("join", { pageTitle: "Join" });
@@ -25,7 +26,15 @@ export const postLogin = (req, res) => {
   res.redirect(routes.home);
 };
 
-export const home = (req, res) => res.render("home",{pageTitle:"main page", videos});
+export const home = async (req, res) => {
+  try {
+    const videos = await Video.find({});
+    res.render("home", { pageTitle: "Home", videos });
+  } catch (error) {
+    console.log(error);
+    res.render("home", { pageTitle: "Home", videos: [] });
+  }
+};
 export const search = (req, res) => {
   const {query: {term:searchingBy} } = req;
   res.render("search", { pageTitle: "Search", searchingBy, videos });

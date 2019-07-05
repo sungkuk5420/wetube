@@ -75,6 +75,7 @@ typings/
 # FuseBox cache
 .fusebox/
 package-lock.json
+videos
 uploads
 static
 build
