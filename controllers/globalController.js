@@ -29,6 +29,7 @@ export const postLogin = (req, res) => {
 export const home = async (req, res) => {
   try {
     const videos = await Video.find({});
+    console.log(videos);
     res.render("home", { pageTitle: "Home", videos });
   } catch (error) {
     console.log(error);
