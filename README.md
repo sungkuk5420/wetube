@@ -24,3 +24,8 @@ npm install dotenv
 ```
 npm install multer
 ```
+
+### eslint
+```
+npm install eslint -g
+```
