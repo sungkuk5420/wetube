@@ -29,17 +29,28 @@ export const postLogin = (req, res) => {
 export const home = async (req, res) => {
   try {
     const videos = await Video.find({}).sort({ _id: -1 });
-    console.log(videos);
     res.render("home", { pageTitle: "Home", videos });
   } catch (error) {
-    console.log(error);
     res.render("home", { pageTitle: "Home", videos: [] });
   }
 };
-export const search = (req, res) => {
-  const {query: {term:searchingBy} } = req;
+
+export const search = async (req, res) => {
+  const {
+    query: { term: searchingBy }
+  } = req;
+  let videos = [];
+  try {
+    videos = await Video.find({
+      title: { $regex: searchingBy, $options: "i" }
+    });
+  } catch (error) {
+    console.log(error);
+  }
+  console.log(videos);
   res.render("search", { pageTitle: "Search", searchingBy, videos });
 };
+
 export const logout = (req, res) => {
   // To Do: Process Log Out
   res.redirect(routes.home);
