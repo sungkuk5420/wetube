@@ -1,5 +1,8 @@
 @import "config/_variables.scss";
+@import "config/reset.scss";
+@import "main.scss";
 
 body {
   background-color: $sexyColor;
 }
+@import "partials/header.scss";
