@@ -29,3 +29,16 @@ npm install multer
 ```
 npm install eslint -g
 ```
+
+### webpack
+```
+npm install webpack webpack-cli
+npm install extract-text-webpack-plugin@next
+npm install autoprefixer
+npm install css-loader
+npm install node-sass
+npm install postcss-loader
+npm install sass-loader
+npm install @babel/polyfill
+npm install babel-loader
+```
