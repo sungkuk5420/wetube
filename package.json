@@ -3,10 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "dependencies": {
-    "@babel/core": "^7.3.3",
-    "@babel/node": "^7.2.2",
+    "@babel/core": "^7.5.4",
+    "@babel/node": "^7.5.0",
     "@babel/polyfill": "^7.4.4",
-    "@babel/preset-env": "^7.3.1",
     "autoprefixer": "^9.6.1",
     "babel-loader": "^8.0.6",
     "cookie-parser": "~1.4.3",
@@ -32,12 +31,13 @@
     "dev:assets": "webpack -w"
   },
   "devDependencies": {
-    "nodemon": "^1.18.6",
+    "@babel/preset-env": "^7.5.4",
     "eslint": "^5.9.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-config-prettier": "^3.3.0",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-prettier": "^3.0.0",
+    "nodemon": "^1.18.6",
     "prettier": "^1.15.2"
   }
 }
