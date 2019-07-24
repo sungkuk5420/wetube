@@ -41,4 +41,7 @@ npm install postcss-loader
 npm install sass-loader
 npm install @babel/polyfill
 npm install babel-loader
+npm install @babel/core 
+npm install @babel/node
+npm install @babel/preset-env
 ```
